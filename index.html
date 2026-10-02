@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>День учителя — пожелания</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0,0,0,0.3);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+    h1 { font-size: 24px; margin-bottom: 20px; }
+    #wish {
+      font-size: 20px;
+      margin: 30px 0;
+      min-height: 60px;
+      font-weight: bold;
+    }
+    button {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #ff4757; transform: scale(1.05); }
+    .hint { font-size: 14px; opacity: 0.7; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 С Днём учителя! 🎉</h1>
+    <p>Нажми на кнопку и получи пожелание:</p>
+    <div id="wish">...</div>
+    <button onclick="showWish()">Получить пожелание</button>
+    <p class="hint">Сделано с любовью для наших учителей ❤️</p>
+  </div>
+
+  <script>
+    const wishes = [
+      "Пусть каждый день будет добрым!",
+      "Спасибо за ваше терпение!",
+      "Вы — лучшие!",
+      "Пусть ученики радуют вас!",
+      "Здоровья и счастья!",
+      "Пусть вдохновение не покидает вас!",
+      "Спасибо за ваши знания!",
+      "Пусть каждый урок будет в радость!",
+      "Вы делаете мир лучше!",
+      "Пусть сбудется всё задуманное!"
+    ];
+
+    function showWish() {
+      const random = Math.floor(Math.random() * wishes.length);
+      document.getElementById('wish').textContent = wishes[random];
+    }
+  </script>
+</body>
+</html>
