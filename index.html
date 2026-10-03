@@ -7,7 +7,12 @@
   <style>
     body {
       font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #F1F1BF, #EADFCB, #B8543A);
+      background-image: url('wehyfg
+.jpg'); /* ← ВОТ ЗДЕСЬ КАРТИНКА */
+      background-size: cover;                  /* растянуть на весь экран */
+      background-position: center;             /* центрировать */
+      background-repeat: no-repeat;            /* не повторять */
+      background-attachment: fixed;            /* не двигается при скролле */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -17,7 +22,7 @@
       text-align: center;
     }
     .container {
-      background: #EADFCB;
+      background: rgba(234, 223, 203, 0.9); /* полупрозрачный бежевый */
       padding: 40px 30px;
       border-radius: 25px;
       max-width: 500px;
@@ -65,7 +70,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎉 С Днём учителя! 🎉</h1>
+    <h1>🍂 С Днем учителя! 🍂</h1>
     <p>Нажми на кнопку и получи пожелание:</p>
     <div id="wish">...</div>
     <button onclick="showWish()">Получить пожелание</button>
@@ -93,4 +98,3 @@
   </script>
 </body>
 </html>
-
